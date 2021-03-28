@@ -80,8 +80,11 @@
       
     }
     
-    .dark-button{
+    .auth-button-container{
       display: flex;
       justify-content: space-around;
     }
+     /* .dark-button {
+       justify-content: space-between;
+     } */
   }
