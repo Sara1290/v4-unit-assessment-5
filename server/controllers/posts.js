@@ -1,3 +1,5 @@
+const user = require("./user");
+
 module.exports = {
     readPosts: async (req, res) => {
       let { id } = req.session.user;
@@ -39,14 +41,15 @@ module.exports = {
     },
     createPost: (req, res) => {
       const db = req.app.get('db')
-      const { id } = req.session.user
+      const { id } =  req.session.user
+      console.log(user)
       const { title, img, content } = req.body
       const date = newDate
       if (id) {
-        db.post.create_post([id, title, img, content, date])
+        return db.post.create_post([id, title, img, content, date])
         .then(_ =>res.sendStatus(200))
       } else {
-        res.sendStatus(403)
+       return res.sendStatus(403)
       }
 
     },

@@ -43,3 +43,14 @@
     font-family: 'Open Sans','Courier New', Courier, monospace;
     font-size: 12px;
   }
+
+  @media (max-width: 450px) {
+    .form-img-prev {
+      max-width: 85%;
+      height: 200px;
+      border: 1px solid lightgray;
+      margin-top: 10px;
+    }
+  }
+  /*i just made it so you can see the whole form with no scroll on mobile because it 
+  was otherwise responsive*/
