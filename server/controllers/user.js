@@ -39,11 +39,11 @@ module.exports = {
         req.session.destroy();
         return res.status(200);
     },
-    getUser: (req, res) => {
-        if (req.session.username) {
-            res.status(200).send(req.session.username)
-        } else {
-            res.sendStatus(404)
-        }
-    }
+    // getUser: (req, res) => {
+    //     if (req.session.username) { 
+    //         res.status(200).send(req.session.username)
+    //     } else {
+    //         res.sendStatus(404)
+    //     }
+    // }
 }

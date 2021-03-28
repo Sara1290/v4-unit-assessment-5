@@ -24,7 +24,7 @@ app.use(session ({
 //Auth Endpoints
 app.post('/api/auth/register', userCtrl.register);
 app.post('/api/auth/login', userCtrl.login);
-app.get('/api/auth/me', userCtrl.getUser);
+// app.get('/api/auth/me', userCtrl.getUser);
 app.post('/api/auth/logout', userCtrl.logout);
 
 //Post Endpoints
