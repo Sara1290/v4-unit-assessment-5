@@ -1,3 +1,3 @@
 DELETE 
-FROM helo_users
-WHERE id LIKE $1
+FROM helo_posts
+WHERE id = $1
