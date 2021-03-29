@@ -33,6 +33,7 @@ module.exports = {
             return res.status(403).send("Incorrect Password");
         }
         req.session.user = {profile_pic: user.profile_pic, username: user.username, id: user.id};
+        console.log(req.session.user)
         return res.send(req.session.user);
     },
     logout: (req, res) => {
