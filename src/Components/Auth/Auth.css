@@ -82,9 +82,7 @@
     
     .auth-button-container{
       display: flex;
+      width: 75vw;
       justify-content: space-around;
     }
-     /* .dark-button {
-       justify-content: space-between;
-     } */
   }
