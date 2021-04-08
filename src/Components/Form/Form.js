@@ -21,7 +21,10 @@ class Form extends Component {
   }
   
   render() {
-    let imgSrc = this.state.img ? this.state.img : noImage;
+    let imgSrc = 
+    this.state.img 
+    ? this.state.img 
+    : noImage;
 
     return (
       <div className='form content-box'>

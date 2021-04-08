@@ -16,6 +16,8 @@ class Nav extends Component {
     this.getUser = this.getUser.bind(this);
   }
 
+  //so the getUser handler in the server is actually set up and this code is working as expected. It's in the component did mount, so it's checking
+  //for a user before there actually is one, so that's why it fails, because initially it will, because no one is logged in, ..initially.
   componentDidMount() {
     this.getUser()
   }

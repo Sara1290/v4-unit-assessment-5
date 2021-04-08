@@ -28,11 +28,17 @@ class Dash extends Component {
     let { search, myPosts, oldestFirst } = this.state;
     let url = '/api/posts';
     if (myPosts && !search) {
-      oldestFirst ? url += '?mine=true&oldest=true' : url += '?mine=true';
+      oldestFirst 
+      ? url += '?mine=true&oldest=true' 
+      : url += '?mine=true';
     } else if (!myPosts && search) {
-      oldestFirst ? url += `?search=${search}&oldest=true` : url += `?search=${search}`;
+      oldestFirst 
+      ? url += `?search=${search}&oldest=true` 
+      : url += `?search=${search}`;
     } else if (myPosts && search) {
-      oldestFirst ? url += `?mine=true&search=${search}&oldest=true` : url += `?mine=true&search=${search}`;
+      oldestFirst 
+      ? url += `?mine=true&search=${search}&oldest=true` 
+      : url += `?mine=true&search=${search}`;
     } else {
       if (oldestFirst) {
         url += '?oldest=true'
@@ -40,7 +46,8 @@ class Dash extends Component {
     }
     axios.get(url)
       .then(res => {
-        this.setState({ posts: res.data, loading: false })
+        this.setState({
+           posts: res.data, loading: false })
       })
   }
 
